@@ -1,87 +1,86 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>West Peek Productions</title>
+  <meta name="description" content="Turnkey virtual and hybrid event production with calm, professional execution.">
+  <link rel="canonical" href="https://westpeek.productions/"/>
   <link rel="stylesheet" href="assets/base.css">
 </head>
 <body>
 <header>
   <div class="nav">
-    <div class="brand">WEST PEEK PRODUCTIONS</div>
+    <div class="brand"><img src="assets/img/productions-logo.jpg" alt="West Peek Productions logo"><span>West Peek Productions</span></div>
+    <nav class="navlinks"><a href="index.html">Home</a></nav>
   </div>
-</header>
-
-<div class="container">
+</header><div class="container">
   <div class="hero">
-    <div class="img"></div>
+    <div class="img" style="background-image:url('assets/img/productions-hero.jpg')"></div>
     <div class="copy">
+      <div class="kicker">West Peek Productions</div>
       <h1>Turnkey virtual & hybrid event production.</h1>
-      <p>Strategy, technology, and calm execution for organizations that care about credibility and experience.</p>
-      <p><em>Good people should meet good people.</em></p>
+      <p>West Peek Productions is a specialized production company founded in 2020 by Scooter Taylor. We combine strategic planning with technology support so your event feels calm, credible, and professionally run.</p>
+      <div class="one-liner">Good people should meet good people.</div>
     </div>
   </div>
 
   <section class="section">
-    <h2>What we do</h2>
-    <p>
-      West Peek Productions is a specialized virtual and hybrid event production company founded in 2020 by Scooter Taylor.
-      We partner with organizations to design and execute online experiences that feel intentional, professional, and human.
-    </p>
-    <p>
-      Our team has produced more than 400 virtual and hybrid events — including conferences, summits, galas, pitch competitions,
-      board meetings, career fairs, and community gatherings — for clients ranging from startups to Fortune 500 organizations.
-    </p>
+    <h2>About</h2>
+    <p>Our passion is an incomparable turnkey event management process with high quality technical expertise. Our creative content, flawless execution, seamless AV production, and cutting-edge technology ensure exceptional event experiences.</p>
+    <p>We’ve produced over 400 virtual and hybrid events including conferences, summits, galas, pitch competitions, internal board meetings, career fairs, college homecomings, and more.</p>
   </section>
 
   <section class="section">
-    <h2>How it works</h2>
+    <h2>Here’s how it works</h2>
     <div class="card-grid">
-      <div class="card">
-        <h3>Before the event</h3>
-        <p>
-          Platform selection, technical planning, rehearsals, and speaker preparation.
-          We design the system so nothing feels improvised on the day of the event.
-        </p>
-      </div>
-      <div class="card">
-        <h3>During the event</h3>
-        <p>
-          Live production, visuals, graphics, audio, camera direction, and real‑time troubleshooting.
-          Our role is to keep things calm and invisible.
-        </p>
-      </div>
-      <div class="card">
-        <h3>After the event</h3>
-        <p>
-          Recordings, post‑event assets, follow‑ups, and debriefs so one event becomes long‑term leverage.
-        </p>
-      </div>
+      <div class="card"><h3>Technology management (before)</h3><p>Guide, support, and optimize setup. Pre-event tech checks for speakers and attendees.</p></div>
+      <div class="card"><h3>Production services (during)</h3><p>Visuals, graphics, overlays, and professional-grade audio/video. Live run-of-show and calm problem solving.</p></div>
+      <div class="card"><h3>Speaker support (after)</h3><p>VIP service, logistics, run-throughs, recordings, and post-event assets so one event turns into long-term leverage.</p></div>
     </div>
   </section>
 
   <section class="section">
-    <h2>Who we work with</h2>
-    <p>
-      Marketing and communications leaders, event professionals, foundations, nonprofits,
-      educational institutions, and cross‑functional teams inside larger organizations.
-    </p>
+    <h2>Benefits of working with West Peek</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Dedicated support</h3><p>Personalized attention from planning through post-event.</p></div>
+      <div class="card"><h3>Professional production value</h3><p>High-signal visuals and delivery that protect your credibility.</p></div>
+      <div class="card"><h3>Risk reduction</h3><p>We plan for the hard parts so your team can focus on the experience.</p></div>
+    </div>
   </section>
+<section class="section">
+  <h2>Request a quote</h2>
+  <p>Tell us what you’re planning. We’ll respond with a clear next step and a practical estimate of scope.</p>
+  <div class="form">
+    <form data-westpeek-form action="/api/lead" method="POST">
+      <input type="hidden" name="site" value="productions">
+      <input type="hidden" name="lead_type" value="quote_request">
+      <input type="text" name="website" autocomplete="off" tabindex="-1" style="display:none">
+      
+<label>Name</label><input name="name" required>
+<label>Email</label><input name="email" type="email" required>
+<label>Organization</label><input name="company" required>
+<label>Event type</label>
+<select name="event_type" required>
+  <option value="">Select…</option>
+  <option>Webinar</option><option>Summit</option><option>Conference</option><option>Hybrid</option><option>Internal / Board</option><option>Other</option>
+</select>
+<label>Target date (approx.)</label><input name="event_date" placeholder="e.g., March 2026">
+<label>Estimated attendee count (optional)</label><input name="audience_size">
+<label>What do you need help with?</label>
+<textarea name="description" required placeholder="Run-of-show, speakers, platform selection, graphics, live production, post-event assets…"></textarea>
 
-  <section class="section">
-    <h2>Coming soon</h2>
-    <p>
-      This site is being expanded. If you’re planning a virtual or hybrid event and want a quote or a sanity check,
-      reach out directly.
-    </p>
-    <p><strong>Email:</strong> scooter@westpeek.ventures</p>
-  </section>
-</div>
-
-<footer>
-  <p>© West Peek Productions</p>
-  <p><em>Good people should meet good people.</em></p>
+      <button type="submit">Request quote</button>
+      <div class="small" data-form-status style="margin-top:10px"></div>
+      <div class="small" style="margin-top:10px">If the form fails to send, email <strong>scooter@westpeek.ventures</strong>.</div>
+    </form>
+  </div>
+</section></div><footer>
+  <div><a href="https://www.linkedin.com/company/west-peek-productions/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/westpeek" target="_blank" rel="noopener">Instagram</a> · <a href="https://x.com/WestPeek" target="_blank" rel="noopener">X</a> · <a href="https://www.youtube.com/@scootertaylor" target="_blank" rel="noopener">YouTube</a></div>
+  <div style="margin-top:10px">Contact: <a href="mailto:scooter@westpeek.ventures">scooter@westpeek.ventures</a></div>
+  <div class="one-liner" style="margin-top:10px">Good people should meet good people.</div>
+  <div class="small" style="margin-top:10px">© West Peek Productions</div>
 </footer>
+<script src="assets/js/forms.js"></script>
 </body>
 </html>
