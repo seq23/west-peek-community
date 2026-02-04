@@ -49,3 +49,18 @@ footer a{color:var(--link)}
   .nav{align-items:flex-start;flex-direction:column}
   .navlinks{justify-content:flex-start}
 }
+
+
+/* Readability fixes: keep copy off the image + darken bright hero photos */
+.hero{position:relative}
+.hero .img{position:absolute;right:0;top:0;bottom:0;width:52%;background:#2b2b2c center/cover no-repeat}
+.hero .img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(11,11,12,.88) 0%, rgba(11,11,12,.35) 35%, rgba(11,11,12,.10) 100%);}
+.hero .copy{position:relative;z-index:2;width:48%;max-width:none;padding:64px 56px}
+.hero h1{max-width:18ch}
+.hero p{max-width:52ch}
+@media (max-width:860px){
+  .hero .img{position:relative;width:100%;height:260px}
+  .hero .img:after{background:linear-gradient(180deg, rgba(11,11,12,.25) 0%, rgba(11,11,12,.55) 100%)}
+  .hero .copy{width:100%}
+  .hero h1{max-width:none}
+}
