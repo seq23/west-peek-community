@@ -1,0 +1,171 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+  color: #111;
+  background: #0b0b0c;
+}
+a { color: #ffffff; text-decoration: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+.hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+.hero h1 { font-size: 52px; line-height: 1.05; margin-bottom: 24px; color:#fff; }
+.hero p { font-size: 20px; color: #cfcfcf; }
+.section { padding: 80px 0; border-top: 1px solid #1f1f1f; }
+.section h2 { font-size: 36px; margin-bottom: 24px; color:#fff; }
+.section p { font-size: 18px; color: #cfcfcf; max-width: 780px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 32px; margin-top: 40px; }
+.card { background:#141416; padding:32px; border-radius:12px; }
+.card h3 { margin-top:0; color:#fff; }
+footer { border-top:1px solid #1f1f1f; padding:40px 24px; text-align:center; font-size:14px; color:#aaa; }
+input, textarea, select {
+  width:100%; padding:12px; margin-bottom:14px;
+  border-radius:6px; border:1px solid #333;
+  background:#0f0f10; color:#fff;
+}
+button {
+  background:#fff; color:#000; border:none;
+  padding:14px 22px; border-radius:6px;
+  font-weight:600; cursor:pointer;
+}
+
+
+/* --- Ventures hero (inspiration-style) --- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(11,11,12,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1f1f1f;
+}
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav .brand {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nav a {
+  color: #cfcfcf;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.nav a:hover { background: #141416; color: #fff; }
+
+.ticker {
+  border-bottom: 1px solid #1f1f1f;
+  background: #0b0b0c;
+  overflow: hidden;
+}
+.ticker .track {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 14px 0;
+  animation: marquee 18s linear infinite;
+  color: #bdbdbd;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hero-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+}
+.hero-inspo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0b0b0c;
+  border: 1px solid #1f1f1f;
+  min-height: 520px;
+}
+.hero-inspo .img-side {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 48%;
+  background-image: linear-gradient(90deg, rgba(11,11,12,1) 0%, rgba(11,11,12,0.2) 30%, rgba(11,11,12,0.05) 55%),
+                    url("assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-inspo .headline {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-inspo h1 {
+  margin: 0 0 18px 0;
+  font-size: 60px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.hero-inspo p {
+  margin: 0;
+  max-width: 720px;
+  font-size: 18px;
+  color: #cfcfcf;
+}
+.hero-cta {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-cta a.primary {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.hero-cta a.secondary {
+  display: inline-block;
+  background: #141416;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+}
+.hero-note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #a7a7a7;
+}
+
+@media (max-width: 900px) {
+  .hero-inspo { min-height: 620px; }
+  .hero-inspo .img-side {
+    width: 100%;
+    opacity: 0.35;
+  }
+  .hero-inspo .headline {
+    width: 100%;
+    padding: 44px 28px;
+  }
+  .hero-inspo h1 { font-size: 44px; }
+}
