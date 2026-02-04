@@ -1,20 +1,32 @@
-# West Peek Community Monorepo (3 sites, 1 repo)
+# West Peek — 3 Sites, 1 Repo (Cloudflare Pages)
 
-This repo is designed to deploy multiple static sites from one GitHub repo via Cloudflare Pages.
+This repo deploys three static sites from one GitHub repo using **three separate Cloudflare Pages projects**.
 
-## Build command
-Cloudflare Pages should run:
+## Sites
+- **West Peek Ventures** → `westpeek.ventures`
+- **West Peek Productions** → `westpeek.productions`
+- **West Peek Community** → `joinwestpeek.com`
 
-`node scripts/build.mjs ventures`
+## Cloudflare Pages settings (per project)
 
-(Later: `productions` or `community`)
+### Ventures
+- Build command: `node scripts/build.mjs ventures`
+- Output directory: `dist/ventures`
 
-## Output directory
-Set Cloudflare Pages output directory to:
+### Productions
+- Build command: `node scripts/build.mjs productions`
+- Output directory: `dist/productions`
 
-`dist/ventures`
+### Community
+- Build command: `node scripts/build.mjs community`
+- Output directory: `dist/community`
 
-## Source
-The source files live in:
+## Shared assets
+All sites consume shared assets in `shared/assets/`. During build, assets are copied into `dist/<site>/assets/`.
 
-`sites/ventures/`
+## Forms
+Each site includes a real contact form that POSTs to `/api/lead` (expected to be powered by a Cloudflare Worker).
+
+
+## Community hero image
+- `shared/assets/img/community-hero.jpg` is used on the community homepage hero.
